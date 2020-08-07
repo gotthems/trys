@@ -114,7 +114,7 @@
     </ul>
         </div>
     <br/>
-
+<compvue></compvue>
   </div>
 </template>
 
@@ -122,6 +122,7 @@
 
 import api from './api/index'
 import Vuetify from "vuetify"
+
 
 export default {
   name: 'app',

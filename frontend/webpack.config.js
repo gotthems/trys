@@ -4,8 +4,13 @@ var BundleTracker = require('webpack-bundle-tracker')
 var WriteFilePlugin = require('write-file-webpack-plugin')
 
 
+
 module.exports = {
-  entry: './src/main.js',
+   entry: ['./src/main.js',
+     './src/api/index.js',
+   ],
+
+
   output: {
     path: path.resolve(__dirname, './dist'),
     publicPath: 'http://localhost:8080/dist/',
@@ -121,7 +126,9 @@ module.exports = {
   ],
   resolve: {
     alias: {
-      'vue$': 'vue/dist/vue.esm.js'
+      'vue$': 'vue/dist/vue.esm.js',
+
+
     },
     extensions: ['*', '.js', '.vue', '.json']
   },

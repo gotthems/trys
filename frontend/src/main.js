@@ -11,6 +11,7 @@ import '@mdi/font/css/materialdesignicons.css'
 new Vue({
   el: '#app',
     vuetify,
+
   beforeCreate(){
     Vue.prototype.$http = axios
     axios.defaults.xsrfHeaderName = 'X-CSRFToken'
