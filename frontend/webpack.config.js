@@ -8,6 +8,8 @@ var WriteFilePlugin = require('write-file-webpack-plugin')
 module.exports = {
    entry: ['./src/main.js',
      './src/api/index.js',
+
+
    ],
 
 
