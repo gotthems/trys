@@ -4,26 +4,42 @@
   <div id="app">
 
 
-    <navBar></navBar>
+      <form @submit.prevent="onSubmit">
+      <label>İçerik Başlığı</label>
+      <v-text-field type="text" v-model="formData.title"/>
+      <label>Hata Çözümü</label>
+       <v-textarea id="txtInput" v-model="formData.solved"></v-textarea>
+       <label>Kullanılan Dil veya Diller</label>
+       <v-text-field id="txtInput" v-model="formData.software_lang"></v-text-field>
+
+      <br/>
+
+                  <div style="float: right;">
+                  <v-app>
+      <v-btn color="deep-purple accent-4" depressed small width="100px" height="40px" style="color: #eeeeee;"  type="submit">Submit</v-btn>
+
+                  </v-app>
+                    </div>
 
 
+    </form>
 
 
-
-  <router-view></router-view>
 
   </div>
+
+
+
 </template>
 
 <script>
-
-import api from './api/index'
+  import api from '../api/index'
 import Vuetify from "vuetify"
-import navBar from "./components/navbar"
-import {ProfileData} from "./store/module";
+import navBar from "../components/navbar"
+import {ProfileData} from "../store/module";
 
-export default {
-  name: 'app',
+  export default {
+    name: "formPage",
   components: {navBar},
 
   data(){
@@ -39,7 +55,7 @@ export default {
   },
 
   created(){
-    this.$store.dispatch( "initApp")
+
   },
 
   computed:{
@@ -59,13 +75,12 @@ export default {
 
 
 
-}
 
 
-
+    }
 </script>
 
-<style lang="scss">
+<style scoped>
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

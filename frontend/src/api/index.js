@@ -23,6 +23,13 @@ export default {
 
   },
 
+    detailNotes(method, params, data, id){
+
+      return axmethod('apinotes/'+ id +"/", method, {data})
+
+
+  },
+
 
 
 }

@@ -3,6 +3,9 @@ import Router from 'vue-router'
 import App from '../App.vue'
 import Home from '../view/Home'
 import form_create from '../view/form_create'
+import formPage from '../view/formPage'
+import updateFormPage from '../view/formUpdatePage'
+import noteDetailPage from '../view/noteDetailPage'
 
 Vue.use(Router)
 
@@ -22,6 +25,21 @@ export default new Router({
       path: '/form_create',
       name: 'form_create',
       component: form_create
+    },
+      {
+      path: '/formPage',
+      name: 'formPage',
+      component: formPage
+    },
+    {
+      path: '/updateFormPage',
+      name: 'updateFormPage',
+      component: updateFormPage
+    },
+       {
+      path: '/noteDetailPage/:id',
+      name: 'noteDetailPage',
+      component: noteDetailPage
     },
 
   ]

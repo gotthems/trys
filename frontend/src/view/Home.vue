@@ -3,12 +3,19 @@
 <div id="app">
   <p>Home</p>
 
-  <span>{{welcomeMessage}}</span>
+  <div v-for="note in notes">
+  <router-link :to="`/noteDetailPage/${note.id}`" >
+   <br> <h3  >  {{note.title}} {{note.id}} </h3>
+    </router-link>
+    <br> <span>{{note.solved}}</span>
+<router-link :to="{ name : 'updateFormPage', params: { root: note.id}} ">
+  <button style="background: #2c3e50; color: #eeeeee;float:left;" > Update </button>
+ </router-link>
 
-  <input v-model="name"/>
+<v-btn style="background: red; " v-on:click="deleteNote(id = note.id)">Delete </v-btn>
 
 
- <v-btn small @click="updateUser">Update Name</v-btn>
+</div>
 
 </div>
 
@@ -18,40 +25,41 @@
 
 <script>
   import {mapState, mapGetters,mapActions,mapMutations} from 'vuex'
-  import navbar from "../components/navbar";
+  import Vuetify from "vuetify"
+  import {ProfileData} from "../store/module";
 
     export default {
 
 
-
-      data(){
-return {
-  name: "Hi"
-}
-      },
-
-
         name: "Home",
-      components: {navbar},
-      computed:{
-           ...mapState([
-             'message',
-             'username'
-           ]),
-        ...mapGetters([
-          "welcomeMessage"
-        ])
+
+
+      created(){
+    this.$store.dispatch( "initApp")
+
+
       },
+
+  computed:{
+    notes (){
+      return this.$store.getters.getNote
+    },
+
+
+
+  },
       methods:{
-        updateUser(){
+          deleteNote(id){
 
-          this.updateUsername(this.name)
-        },
-       ...mapActions(['updateUsername'])
+            this.$store.dispatch('deletenote',id)
 
-      }
+          }
+      },
+
+    params : ['root']
 
     }
+
 </script>
 
 <style scoped>
