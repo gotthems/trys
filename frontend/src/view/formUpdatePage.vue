@@ -48,8 +48,9 @@ import {ProfileData} from "../store/module";
         content: '-',
         solved:"",
         software_lang:"",
-        id : this.$route.params.root
+        id : ""
       },
+
 
 
     }
@@ -57,29 +58,56 @@ import {ProfileData} from "../store/module";
 
   created(){
     this.$store.dispatch( "initApp")
+    this.formData.id = this.$route.params.id
+    console.log(this.formData.id + "create")
 
 
   },
 
   computed:{
+
     notes (){
       return this.$store.getters.getNote
-    }
+    },
+
   },
   methods: {
     onSubmit(){
        this.$store.dispatch('addnote',this.formData)
     },
     onUpdate(){
-      console.log("asdad" +" " +this.$route.params.root)
-      console.log(this.id)
       this.$store.dispatch('updatenote',this.formData)
+      console.log(this.$route.params.id + "OnUpdate")
+       this.notematch()
+    },
+    notematch(){
+    console.log(this.formData.id + "create2")
+
+      for( var i in  this.notes){
+         console.log(i + "sayıyor")
+          var listest=[];
+
+        if(this.notes[i]['id']  == this.$route.params.id ){
+
+          listest.push(this.notes[i]['id'])
+          console.log(this.$route.params.id +"s" + this.notes[i]['id'] + "ifififif")
+
+          break;
+        }
 
     }
-  }
+    if(listest.length==0){
+      this.$router.push('/Home')
+      console.log("böyle bir syfa bulunmamaktaıdr")
+    }
 
 
+    }
+  },
+      mounted() {
+        this.formData.id =  this.$route.params.id
 
+      }
 
 
     }

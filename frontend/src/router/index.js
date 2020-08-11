@@ -32,15 +32,16 @@ export default new Router({
       component: formPage
     },
     {
-      path: '/updateFormPage',
+      path: '/updateFormPage/:id',
       name: 'updateFormPage',
       component: updateFormPage
     },
-       {
+     {
       path: '/noteDetailPage/:id',
       name: 'noteDetailPage',
       component: noteDetailPage
     },
+
 
   ]
 })
