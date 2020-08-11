@@ -1,9 +1,14 @@
+import json
+
+from django.core import serializers
 from django.shortcuts import render
+from django.http import JsonResponse, HttpResponse
 from rest_framework import viewsets, status
 from rest_framework.generics import DestroyAPIView, UpdateAPIView
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from rest_framework.views import APIView
+from django.shortcuts import render, get_object_or_404,redirect,HttpResponseRedirect,reverse
 
 from vuenote.models import Note
 from vuenote.serializers import NoteSerializer,DeleteSerializer,UpdateSerializer
@@ -43,3 +48,9 @@ class NoteLookUp(viewsets.ModelViewSet):
     lookup_field = 'id'
     filter_backends = (SearchFilter,OrderingFilter)
     search_fields = ('title','content')
+
+
+def sendmodel(request):
+    all_pro = Note.objects.all()
+    data = serializers.serialize('json', all_pro, fields=('title'))
+    return HttpResponse(data, content_type='application/json')

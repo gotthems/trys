@@ -1,9 +1,10 @@
 <template>
 
-  <div id="app">
+  <div id="app" >
 
 
-      <form @submit.prevent="onUpdate">
+      <form @submit.prevent="onUpdate" v-for="note in notes" v-if="$route.params.id.toString().indexOf(note.id) == 0 " >
+
       <label>İçerik Başlığı</label>
       <v-text-field type="text" v-model="formData.title"/>
       <label>Hata Çözümü</label>
@@ -24,8 +25,13 @@
                     </div>
 
 
+
+
     </form>
-  </div>
+    <div  v-for="note in notes" v-if="$route.params.id.toString().indexOf(note.id) == -1 && notematch().length == 0">
+    </div>
+</div>
+
 
 </template>
 
@@ -60,6 +66,7 @@ import {ProfileData} from "../store/module";
     this.$store.dispatch( "initApp")
     this.formData.id = this.$route.params.id
     console.log(this.formData.id + "create")
+    console.log(this.$route.matched[0]['path'].toString())
 
 
   },
@@ -101,8 +108,9 @@ import {ProfileData} from "../store/module";
       console.log("böyle bir syfa bulunmamaktaıdr")
     }
 
-
+return listest
     }
+
   },
       mounted() {
         this.formData.id =  this.$route.params.id

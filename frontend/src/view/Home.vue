@@ -8,6 +8,7 @@
    <br> <h3  >  {{note.title}} {{note.id}} </h3>
  </router-link>
     <br> <span>{{note.solved}}</span>
+    <hr style="color: white;">
 <router-link :to="{ name : 'updateFormPage', params: { id: note.id, root: note.id}} ">
   <button style="background: #2c3e50; color: #eeeeee;float:left;" > Update </button>
  </router-link>

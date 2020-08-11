@@ -18,6 +18,7 @@ from django.contrib import admin
 from django.urls import path, include, re_path
 from django.views.generic import TemplateView
 from vuenote.views import DeleteDemand,UpdateDemand
+from vuenote.views import sendmodel
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -25,6 +26,7 @@ urlpatterns = [
     path('api', include('vuenote.urls')),
     url(r'^delete/(?P<id>[-\w]+)/$', DeleteDemand.as_view()),
     url(r'^update/(?P<id>[-\w]+)/$', UpdateDemand.as_view()),
+    path('sendmodel/', sendmodel, name='sendmodel'),
 
 ]
 urlpatterns += [
