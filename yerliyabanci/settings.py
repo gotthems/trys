@@ -39,7 +39,16 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'webpack_loader',
     'vuenote',
+    'user',
     'rest_framework',
+    'django.contrib.sites',
+    'allauth.account',
+    'allauth',
+    'allauth.socialaccount',
+    'rest_framework.authtoken',
+    'rest_auth',
+'rest_auth.registration'
+
 
 ]
 
@@ -51,6 +60,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+
 ]
 
 ROOT_URLCONF = 'yerliyabanci.urls'
@@ -125,7 +135,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
-
+STATIC_DIRS = [
+    os.path.join(BASE_DIR, "static")
+]
 
 WEBPACK_LOADER = {
 
@@ -144,10 +156,36 @@ WEBPACK_LOADER = {
 
 
 REST_FRAMEWORK = {
-    # Use Django's standard `django.contrib.auth` permissions,
-    # or allow read-only access for unauthenticated users.
-    #'DEFAULT_PERMISSION_CLASSES': [
-    #    'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
-    #]
 
+    #'DEFAULT_PERMISSION_CLASSES': [
+     #   'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+    #],
+     #   'DEFAULT_AUTHENTICATION_CLASSES': (
+      #  'rest_framework.authentication.TokenAuthentication',
+       # 'rest_framework.authentication.SessionAuthentication',
+    #)
+
+}
+
+
+AUTHENTICATION_BACKENDS = [
+    # Needed to login by username in Django admin, regardless of `allauth`
+    'django.contrib.auth.backends.ModelBackend',
+
+    # `allauth` specific authentication methods, such as login by e-mail
+    'allauth.account.auth_backends.AuthenticationBackend',
+]
+
+
+SITE_ID = 1
+
+ACCOUNT_EMAIL_REQUIRED = True
+ACCOUNT_EMAIL_VERIFICATION = "none"
+ACCOUNT_AUTHENTICATION_METHOD = "username"
+AUTH_USER_MODEL = "user.User"
+ACCOUNT_FORMS = {'signup' : 'user.forms.CustomSignupForm'}
+
+
+REST_AUTH_SERIALIZERS = {
+    'USER_DETAILS_SERIALIZER': 'user.serializer.UserSerializer',
 }

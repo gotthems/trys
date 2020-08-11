@@ -17,18 +17,27 @@ from django.conf.urls import url
 from django.contrib import admin
 from django.urls import path, include, re_path
 from django.views.generic import TemplateView
+
+from user import urls
 from vuenote.views import DeleteDemand,UpdateDemand
 from vuenote.views import sendmodel
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path(r"^.*$", TemplateView.as_view(template_name="index.html")),
+    path('', TemplateView.as_view(template_name="index.html")),
     path('api', include('vuenote.urls')),
     url(r'^delete/(?P<id>[-\w]+)/$', DeleteDemand.as_view()),
     url(r'^update/(?P<id>[-\w]+)/$', UpdateDemand.as_view()),
-    path('sendmodel/', sendmodel, name='sendmodel'),
+
+    url(r'^rest-auth/', include('rest_auth.urls')),
+    url(r'^rest-auth/registration/', include('rest_auth.registration.urls'))
 
 ]
-urlpatterns += [
-    re_path('^.*$', TemplateView.as_view(template_name="index.html")),
-]
+
+"""urlpatterns += [
+    re_path('', TemplateView.as_view(template_name="index.html")),
+]"""
+
+"""path('sendmodel/', sendmodel, name='sendmodel'),
+path('accounts/', include('allauth.urls')),
+path('user/', include(urls)),"""
