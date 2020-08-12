@@ -1,6 +1,7 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
 import {ProfileData} from './module'
+import {UserData} from './userModule'
 Vue.use(Vuex)
 
 const state= {
@@ -50,7 +51,8 @@ const store = new Vuex.Store({
 
   modules:
     {
-      ProfileData: ProfileData
+      ProfileData: ProfileData,
+      UserData: UserData
 
     }
 

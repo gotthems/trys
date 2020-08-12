@@ -15,7 +15,7 @@
         <v-toolbar-title>Helpcom</v-toolbar-title>
 </router-link>
 <v-spacer></v-spacer>
- <v-toolbar flat   max-width="700px" dark height="48%"  >
+ <v-toolbar flat   max-width="700px" dark height="48%"    color="indigo " >
           <v-text-field ></v-text-field>
 
 
@@ -55,6 +55,7 @@
               icon
               v-bind="attrs"
               v-on="on"
+
             >
               <v-icon>mdi-dots-vertical</v-icon>
             </v-btn>
@@ -62,23 +63,72 @@
 
           <v-list>
             <v-list-item
-              v-for="n in 5"
-              :key="n"
-              @click="() => {}"
+
+
             >
-              <v-list-item-title>Option {{ n }}</v-list-item-title>
+
+              <v-list-item-title>
+                <router-link style="text-decoration: none;" to="/userRegister">
+                Register
+                </router-link>
+              </v-list-item-title>
+
             </v-list-item>
+
+
+            <v-list-item>
+                 <v-list-item-title>
+                <router-link style="text-decoration: none;" to="/loginUser">
+                Login
+                </router-link>
+              </v-list-item-title>
+            </v-list-item>
+
+                <v-list-item >
+                 <v-list-item-title>
+              <v-btn @click="Logout">
+                Logout
+                </v-btn>
+
+              </v-list-item-title>
+            </v-list-item>
+
           </v-list>
         </v-menu>
       </v-app-bar>
     </div>
   </v-app>
 
+
+
 </template>
 
 <script>
+
+      import Vuetify from "vuetify"
+  import {UserData} from "../store/userModule";
+
     export default {
-        name: "navbar"
+        name: "navbar",
+
+      created(){
+        this.$store.dispatch('initUserData')
+      },
+
+       computed:{
+    userdata (){
+      return this.$store.getters.getUser
+    },
+  },
+
+      methods : {
+      Logout() {
+        this.$store.dispatch('Logout')
+        console.log("Logout Submit Methodu Çalıştı")
+      }
+    ,
+    }
+
 
     }
 

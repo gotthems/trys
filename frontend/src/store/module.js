@@ -31,6 +31,7 @@ export const ProfileData = {
       console.log(e)
     })
       },
+
       updatenote(state,notes){
 
      api.updateNotes('PUT', null, notes,notes.id).then(res => {
@@ -39,9 +40,8 @@ export const ProfileData = {
       console.log(e)
     })
       },
+
       deletenote(state,noteId){
-
-
      api.deleteNotes('DELETE',null,noteId).then(
         res => {
 
@@ -98,9 +98,6 @@ export const ProfileData = {
         },
         deletenote(context,noteId){
           context.commit('deletenote', noteId)
-
-
-
 
         }
     }

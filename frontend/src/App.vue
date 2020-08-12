@@ -7,7 +7,12 @@
     <navBar></navBar>
 
 
+   <h1 v-for="Users in userdata">
 
+
+               {{Users}}
+
+            </h1>
 
 
   <router-view></router-view>
@@ -17,46 +22,19 @@
 
 <script>
 
-import api from './api/index'
+
 import Vuetify from "vuetify"
 import navBar from "./components/navbar"
-import {ProfileData} from "./store/module";
 
 export default {
   name: 'app',
   components: {navBar},
 
-  data(){
-    return{
-      formData : {
-          title: '',
-        content: '-',
-        solved:"",
-        software_lang:""
-      }
-
-    }
-  },
-
-  created(){
-    this.$store.dispatch( "initApp")
-  },
-
-  computed:{
-    notes (){
-      return this.$store.getters.getNote
-    }
-  },
-  methods: {
-    onSubmit(){
-       this.$store.dispatch('addnote',this.formData)
+      computed:{
+    userdata (){
+      return this.$store.getters.getUser
     },
-    onUpdate(){
-      this.$store.dispatch('updatenote',this.formData)
-    }
-  }
-
-
+  },
 
 
 }
@@ -110,29 +88,7 @@ a {
     display: block;
   }
 
-  button{
-    background: #42b983;
-  height: 40px;
-  min-width: 80px;
-  border: none;
-  border-radius: 10px;
-  color: #eee;
-  font-size: 16px;
-  font-family: 'Cookie', cursive;
-  position: relative;
-  -webkit-tap-highlight-color: transparent;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
 
-
-
-    margin: 5px;
-
-
-
-  }
   textarea{
     height: 150px;
   }

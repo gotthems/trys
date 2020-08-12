@@ -8,6 +8,7 @@ import router from './router/index'
 import store from "./store";
 
 
+
 new Vue({
   el: '#app',
     vuetify,

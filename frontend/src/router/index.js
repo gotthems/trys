@@ -6,6 +6,8 @@ import form_create from '../view/form_create'
 import formPage from '../view/formPage'
 import updateFormPage from '../view/formUpdatePage'
 import noteDetailPage from '../view/noteDetailPage'
+import userRegister from '../view/user/registration'
+import loginUser from '../view/user/login'
 
 Vue.use(Router)
 
@@ -40,6 +42,16 @@ export default new Router({
       path: '/noteDetailPage/:id',
       name: 'noteDetailPage',
       component: noteDetailPage
+    },
+      {
+      path: '/userRegister',
+      name: 'userRegister',
+      component: userRegister
+    },
+    {
+      path: '/loginUser',
+      name: 'loginUser',
+      component: loginUser
     },
 
 

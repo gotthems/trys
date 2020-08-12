@@ -8,8 +8,7 @@ var WriteFilePlugin = require('write-file-webpack-plugin')
 module.exports = {
    entry: ['./src/main.js',
      './src/api/index.js',
-
-
+     './src/api/user.js'
    ],
 
 
@@ -127,6 +126,7 @@ module.exports = {
     new WriteFilePlugin()
   ],
   resolve: {
+
     alias: {
       'vue$': 'vue/dist/vue.esm.js',
 
