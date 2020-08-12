@@ -21,6 +21,7 @@ from django.views.generic import TemplateView
 from user import urls
 from vuenote.views import DeleteDemand,UpdateDemand
 from vuenote.views import sendmodel
+from rest_framework_jwt.views import obtain_jwt_token, refresh_jwt_token
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -28,10 +29,12 @@ urlpatterns = [
     path('api', include('vuenote.urls')),
     url(r'^delete/(?P<id>[-\w]+)/$', DeleteDemand.as_view()),
     url(r'^update/(?P<id>[-\w]+)/$', UpdateDemand.as_view()),
-
+    url(r'api-token-auth/', obtain_jwt_token),
+    url(r'api-token-refresh/', refresh_jwt_token),
     url(r'^rest-auth/', include('rest_auth.urls')),
-    url(r'^rest-auth/registration/', include('rest_auth.registration.urls'))
-
+    url(r'^rest-auth/registration/', include('rest_auth.registration.urls')),
+    path('accounts/', include('allauth.urls')),
+    path('user/', include(urls)),
 ]
 
 """urlpatterns += [
@@ -39,5 +42,5 @@ urlpatterns = [
 ]"""
 
 """path('sendmodel/', sendmodel, name='sendmodel'),
-path('accounts/', include('allauth.urls')),
-path('user/', include(urls)),"""
+
+"""

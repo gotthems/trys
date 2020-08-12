@@ -67,8 +67,6 @@ import {ProfileData} from "../store/module";
     this.formData.id = this.$route.params.id
     console.log(this.formData.id + "create")
     console.log(this.$route.matched[0]['path'].toString())
-
-
   },
 
   computed:{

@@ -35,9 +35,16 @@ export default {
       return axmethod('rest-auth/logout/', method, {data})
 
 
-    }
+    }},
 
-    },
+
+    UserChangePassword(method, params, data){
+    if(method === 'post') {
+      return axmethod('rest-auth/password/change/', method, {data})
+    }
+    else{
+        return axmethod('rest-auth/password/change/', 'post', {})
+    }},
 
 
 

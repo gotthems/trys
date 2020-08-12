@@ -8,6 +8,7 @@ import updateFormPage from '../view/formUpdatePage'
 import noteDetailPage from '../view/noteDetailPage'
 import userRegister from '../view/user/registration'
 import loginUser from '../view/user/login'
+import changePassword from '../view/user/passwordChange'
 
 Vue.use(Router)
 
@@ -52,6 +53,11 @@ export default new Router({
       path: '/loginUser',
       name: 'loginUser',
       component: loginUser
+    },
+       {
+      path: '/changePassword',
+      name: 'changePassword',
+      component: changePassword
     },
 
 

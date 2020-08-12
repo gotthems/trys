@@ -62,10 +62,7 @@
           </template>
 
           <v-list>
-            <v-list-item
-
-
-            >
+            <v-list-item>
 
               <v-list-item-title>
                 <router-link style="text-decoration: none;" to="/userRegister">
@@ -90,6 +87,14 @@
                 Logout
                 </v-btn>
 
+              </v-list-item-title>
+            </v-list-item>
+
+             <v-list-item>
+                 <v-list-item-title>
+                <router-link style="text-decoration: none;" to="/changePassword">
+                Şifreni Değiştir
+                </router-link>
               </v-list-item-title>
             </v-list-item>
 

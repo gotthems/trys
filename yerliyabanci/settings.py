@@ -47,7 +47,8 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'rest_framework.authtoken',
     'rest_auth',
-'rest_auth.registration'
+    'rest_auth.registration',
+
 
 
 ]
@@ -153,7 +154,17 @@ WEBPACK_LOADER = {
 
 }
 
+import time
+from datetime import datetime, date, time, timedelta
 
+
+JWT_AUTH = {
+    'JWT_ALLOW_REFRESH': True,
+    'JWT_VERIFY': True,
+    'JWT_VERIFY_EXPIRATION': True,
+    'JWT_EXPIRATION_DELTA':  timedelta(seconds= 5)
+
+}
 
 REST_FRAMEWORK = {
 
@@ -164,7 +175,16 @@ REST_FRAMEWORK = {
       #  'rest_framework.authentication.TokenAuthentication',
        # 'rest_framework.authentication.SessionAuthentication',
     #)
-
+#   'DEFAULT_PAGINATION_CLASS' : 'rest_framework.pagination.PageNumberPagination',
+    #'PAGE_SIZE':6,
+#'DEFAULT_PERMISSION_CLASSES' : (
+ #       'rest_framework.permissions.IsAuthenticatedOrReadOnly' ,
+  #  ),
+#'DEFAULT_AUTHENTICATION_CLASSES': (
+ #       'rest_framework_jwt.authentication.JSONWebTokenAuthentication' ,
+  #      'rest_framework.authentication.SessionAuthentication',
+   #     'rest_framework.authentication.BasicAuthentication',
+    #),
 }
 
 
@@ -184,8 +204,10 @@ ACCOUNT_EMAIL_VERIFICATION = "none"
 ACCOUNT_AUTHENTICATION_METHOD = "username"
 AUTH_USER_MODEL = "user.User"
 ACCOUNT_FORMS = {'signup' : 'user.forms.CustomSignupForm'}
-
+OLD_PASSWORD_FIELD_ENABLED = False
 
 REST_AUTH_SERIALIZERS = {
     'USER_DETAILS_SERIALIZER': 'user.serializer.UserSerializer',
+    'EXCEPTION_HANDLER': 'rest_framework.views.exception_handler',
+
 }

@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from requests import Response
 
 from rest_framework import generics
 from user.serializer import UserSerializer
@@ -9,6 +10,9 @@ from rest_framework.generics import CreateAPIView
 class UserListView(generics.ListAPIView):
     queryset = User.objects.all()
     serializer_class = UserSerializer
+
+
+
 
 
 
