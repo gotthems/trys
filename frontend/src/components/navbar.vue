@@ -72,11 +72,26 @@
 
             </v-list-item>
 
+             <v-list-item>
+                 <v-list-item-title>
+                <router-link style="text-decoration: none;" to="/userProfile">
+                Profil Bilgileri
+                </router-link>
+              </v-list-item-title>
+            </v-list-item>
 
             <v-list-item>
                  <v-list-item-title>
                 <router-link style="text-decoration: none;" to="/loginUser">
                 Login
+                </router-link>
+              </v-list-item-title>
+            </v-list-item>
+
+             <v-list-item>
+                 <v-list-item-title>
+                <router-link style="text-decoration: none;" to="/changePassword">
+                Şifreni Değiştir
                 </router-link>
               </v-list-item-title>
             </v-list-item>
@@ -87,14 +102,6 @@
                 Logout
                 </v-btn>
 
-              </v-list-item-title>
-            </v-list-item>
-
-             <v-list-item>
-                 <v-list-item-title>
-                <router-link style="text-decoration: none;" to="/changePassword">
-                Şifreni Değiştir
-                </router-link>
               </v-list-item-title>
             </v-list-item>
 
@@ -116,15 +123,9 @@
     export default {
         name: "navbar",
 
-      created(){
-        this.$store.dispatch('initUserData')
-      },
 
-       computed:{
-    userdata (){
-      return this.$store.getters.getUser
-    },
-  },
+
+
 
       methods : {
       Logout() {

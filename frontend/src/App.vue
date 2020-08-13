@@ -7,12 +7,7 @@
     <navBar></navBar>
 
 
-   <h1 v-for="Users in userdata">
 
-
-               {{Users}}
-
-            </h1>
 
 
   <router-view></router-view>
