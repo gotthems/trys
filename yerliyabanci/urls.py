@@ -17,7 +17,7 @@ from django.conf.urls import url
 from django.contrib import admin
 from django.urls import path, include, re_path
 from django.views.generic import TemplateView
-
+from advirtise import urls
 from user import urls
 from vuenote.views import DeleteDemand,UpdateDemand
 from vuenote.views import sendmodel
@@ -35,6 +35,7 @@ urlpatterns = [
     url(r'^rest-auth/registration/', include('rest_auth.registration.urls')),
     path('accounts/', include('allauth.urls')),
     path('user/', include(urls)),
+    path('advirtise/',include('advirtise.urls'))
 ]
 
 """urlpatterns += [
