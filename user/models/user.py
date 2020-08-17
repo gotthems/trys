@@ -2,7 +2,7 @@ from django.contrib.auth.models import AbstractUser
 from django.core.validators import RegexValidator
 from django.db import models
 from user.choices.choice import MartialStatusChoices, EducationalStatusChoices, ProfessionChoices, GenderChoices
-
+from yerliyabanci import settings
 
 
 class Interest(models.Model):
@@ -28,11 +28,25 @@ class User(AbstractUser):
 
     @property
     def info(self):
+        full_name = self.get_full_name() or "-"
+        birthday = self.birthday or "-"
+        gender = self.get_gender_display() or "-"
+        marital_status = self.get_marital_status_display() or "-"
+        educational_status = self.get_educational_status_display() or "-"
+        profession = self.get_profession_display() or "-"
         interests = ", ".join([interest.name for interest in self.interests.all()]) or "-"
+        phone_number = self.phone_number or "-"
 
         context = {
+            'username': self.username,
+            'full_name': full_name,
+            'birthday': birthday,
+            'gender': gender,
+            'marital_status': marital_status,
+            'educational_status': educational_status,
+            'profession': profession,
             'interests': interests,
-
+            'phone_number': phone_number
         }
 
         return context

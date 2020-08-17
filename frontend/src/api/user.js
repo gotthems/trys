@@ -47,6 +47,13 @@ export default {
     }},
 
 
+   UserProfileUpdate(method, params, data){
+
+      return axmethod('rest-auth/user/', method, {data})
+
+   },
+
+
 
 
 

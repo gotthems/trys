@@ -1,12 +1,17 @@
 from django.conf.urls import url
 from django.urls import include, path
+from rest_framework import routers
+from rest_framework.routers import DefaultRouter
+from user.views import *
 
-"""from .views import UserListView,CreateUserView"""
+
+
 
 urlpatterns = [
 
+    url(r'^rest-auth/', include('rest_auth.urls')),
 
-    url(r'^rest-auth/', include('rest_auth.urls'))
+
 ]
 
 """path('user/', UserListView.as_view()),

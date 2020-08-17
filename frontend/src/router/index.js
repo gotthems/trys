@@ -10,6 +10,8 @@ import userRegister from '../view/user/registration'
 import loginUser from '../view/user/login'
 import changePassword from '../view/user/passwordChange'
 import userProfile from '../view/user/userProfile'
+import userProfileUpdate from '../view/user/userProfileUpdate'
+
 
 Vue.use(Router)
 
@@ -64,6 +66,11 @@ export default new Router({
       path: '/userProfile',
       name: 'userProfile',
       component: userProfile
+    },
+      {
+      path: '/userProfileUpdate',
+      name: 'userProfileUpdate',
+      component: userProfileUpdate
     },
 
 

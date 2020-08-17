@@ -4,7 +4,7 @@
 
   <div v-for="note in notes" style=" margin: auto;width: 100%;">
 
- <v-card height="250px" style="padding:10px;margin: auto;width: 60%; " v-if="$route.params.id.toString().indexOf(note.id) == 0">
+ <v-card height="250px" style="padding:10px;margin: auto;width: 60%; " v-if="$route.params.id.toString().indexOf(note.id) == 0" >
 
      <h2>{{note.title}}</h2>
 

@@ -34,6 +34,16 @@ export const UserData = {
 
       },
 
+      userprofilupdate(state,userinputdata){
+
+    api.UserProfileUpdate('PATCH',null,userinputdata).then(res=>{
+      console.log("User Profil Update Çalıştı")
+
+    }).catch((e)=> {
+            console.log(e + "Error")
+        })
+      },
+
       changepassword(state,userinputdata){
     api.UserChangePassword('post',null,userinputdata).then(
       res=> {
@@ -86,6 +96,10 @@ export const UserData = {
         console.log(res)
 
         })
+      },
+
+      userprofilupdate(context,userinput){
+         context.commit('userprofilupdate',userinput)
       },
 
       register(context,userinput){

@@ -1,0 +1,35 @@
+{
+  "Gender": [
+    {
+      "text": 0,
+      "value": "Erkek"
+    },
+    {
+      "text": 1,
+      "value": "Kadın"
+    }
+  ],
+   "educational_status": [
+    {
+      "text": 0,
+      "value": "İlkokul"
+    },
+    {
+      "text": 1,
+      "value": "Ortaokul"
+    },
+     {
+      "text": 2,
+      "value": "Lise"
+    },
+     {
+      "text": 3,
+      "value": "Üniversite"
+    },
+      {
+      "text": 4,
+      "value": "Yükseklisans-Doktora"
+    }
+   ]
+}
+

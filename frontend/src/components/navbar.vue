@@ -14,6 +14,7 @@
 
         <v-toolbar-title>Helpcom</v-toolbar-title>
 </router-link>
+
 <v-spacer></v-spacer>
  <v-toolbar flat   max-width="700px" dark height="48%"    color="indigo " >
           <v-text-field ></v-text-field>
@@ -62,6 +63,16 @@
           </template>
 
           <v-list>
+
+            <v-list-item>
+
+              <v-list-item-title>
+                <router-link style="text-decoration: none;" to="/userProfileUpdate">
+                Kullanıcı Profil Güncelleme
+                </router-link>
+              </v-list-item-title>
+
+            </v-list-item>
             <v-list-item>
 
               <v-list-item-title>

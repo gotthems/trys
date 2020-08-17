@@ -48,7 +48,6 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',
     'rest_auth',
     'rest_auth.registration',
-    'advirtise'
 
 
 
@@ -209,6 +208,13 @@ OLD_PASSWORD_FIELD_ENABLED = False
 
 REST_AUTH_SERIALIZERS = {
     'USER_DETAILS_SERIALIZER': 'user.serializer.UserSerializer',
+
     'EXCEPTION_HANDLER': 'rest_framework.views.exception_handler',
+    'DEFAULT_METADATA_CLASS': 'rest_framework.metadata.SimpleMetadata'
 
 }
+
+MEDIA_ROOT = os.path.join(BASE_DIR,'media')
+
+MEDIA_URL = '/media/'
+

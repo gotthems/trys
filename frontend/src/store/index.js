@@ -2,6 +2,7 @@ import Vue from 'vue';
 import Vuex from 'vuex';
 import {ProfileData} from './module'
 import {UserData} from './userModule'
+import{JsonChoiceData} from './choiceStore'
 Vue.use(Vuex)
 
 const state= {
@@ -52,7 +53,8 @@ const store = new Vuex.Store({
   modules:
     {
       ProfileData: ProfileData,
-      UserData: UserData
+      UserData: UserData,
+      JsonChoiceData : JsonChoiceData
 
     }
 

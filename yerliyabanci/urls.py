@@ -17,11 +17,13 @@ from django.conf.urls import url
 from django.contrib import admin
 from django.urls import path, include, re_path
 from django.views.generic import TemplateView
-from advirtise import urls
-from user import urls
 from vuenote.views import DeleteDemand,UpdateDemand
 from vuenote.views import sendmodel
 from rest_framework_jwt.views import obtain_jwt_token, refresh_jwt_token
+from django.conf import settings
+from django.conf.urls.static import static
+
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -34,9 +36,14 @@ urlpatterns = [
     url(r'^rest-auth/', include('rest_auth.urls')),
     url(r'^rest-auth/registration/', include('rest_auth.registration.urls')),
     path('accounts/', include('allauth.urls')),
-    path('user/', include(urls)),
-    path('advirtise/',include('advirtise.urls'))
+    path('user/', include('user.urls')),
+    path('advertise/', include('advertise.urls')),
+
 ]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 """urlpatterns += [
     re_path('', TemplateView.as_view(template_name="index.html")),
