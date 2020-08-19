@@ -15,7 +15,6 @@ import os
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
@@ -26,7 +25,6 @@ SECRET_KEY = '-5@+y(ylbr($k)445#5kga!jijl55as=a#u_m!45k(fo_m2w!v'
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
 
 # Application definition
 
@@ -48,8 +46,7 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',
     'rest_auth',
     'rest_auth.registration',
-
-
+    'advertise'
 
 ]
 
@@ -85,7 +82,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'yerliyabanci.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
@@ -95,7 +91,6 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
@@ -115,13 +110,10 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/3.0/topics/i18n/
 
 LANGUAGE_CODE = 'tr'
-
-
 
 TIME_ZONE = 'UTC'
 
@@ -130,7 +122,6 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
-
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
@@ -142,14 +133,14 @@ STATIC_DIRS = [
 
 WEBPACK_LOADER = {
 
-    'DEFAULT' : {
+    'DEFAULT': {
 
-            'CACHE' : not DEBUG,
-            'BUNDLE_DIR_NAME': '',
-            'STATS_FILE' : os.path.join(BASE_DIR,'frontend/webpack-stats.json'),
-            'POLL_INTERVAL' : 0.1,
-            'TIMEOUT' : None,
-            'IGNORE' : ['.+\.hot-update.js','.+\.map']
+        'CACHE': not DEBUG,
+        'BUNDLE_DIR_NAME': '',
+        'STATS_FILE': os.path.join(BASE_DIR, 'frontend/webpack-stats.json'),
+        'POLL_INTERVAL': 0.1,
+        'TIMEOUT': None,
+        'IGNORE': ['.+\.hot-update.js', '.+\.map']
     }
 
 }
@@ -157,36 +148,34 @@ WEBPACK_LOADER = {
 import time
 from datetime import datetime, date, time, timedelta
 
-
 JWT_AUTH = {
     'JWT_ALLOW_REFRESH': True,
     'JWT_VERIFY': True,
     'JWT_VERIFY_EXPIRATION': True,
-    'JWT_EXPIRATION_DELTA':  timedelta(seconds= 5)
+    'JWT_EXPIRATION_DELTA': timedelta(seconds=5)
 
 }
 
 REST_FRAMEWORK = {
 
-    #'DEFAULT_PERMISSION_CLASSES': [
-     #   'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
-    #],
-     #   'DEFAULT_AUTHENTICATION_CLASSES': (
-      #  'rest_framework.authentication.TokenAuthentication',
-       # 'rest_framework.authentication.SessionAuthentication',
-    #)
-#   'DEFAULT_PAGINATION_CLASS' : 'rest_framework.pagination.PageNumberPagination',
-    #'PAGE_SIZE':6,
-#'DEFAULT_PERMISSION_CLASSES' : (
- #       'rest_framework.permissions.IsAuthenticatedOrReadOnly' ,
-  #  ),
-#'DEFAULT_AUTHENTICATION_CLASSES': (
- #       'rest_framework_jwt.authentication.JSONWebTokenAuthentication' ,
-  #      'rest_framework.authentication.SessionAuthentication',
-   #     'rest_framework.authentication.BasicAuthentication',
-    #),
+    # 'DEFAULT_PERMISSION_CLASSES': [
+    #   'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+    # ],
+    #   'DEFAULT_AUTHENTICATION_CLASSES': (
+    #  'rest_framework.authentication.TokenAuthentication',
+    # 'rest_framework.authentication.SessionAuthentication',
+    # )
+    #   'DEFAULT_PAGINATION_CLASS' : 'rest_framework.pagination.PageNumberPagination',
+    # 'PAGE_SIZE':6,
+    # 'DEFAULT_PERMISSION_CLASSES' : (
+    #       'rest_framework.permissions.IsAuthenticatedOrReadOnly' ,
+    #  ),
+    # 'DEFAULT_AUTHENTICATION_CLASSES': (
+    #       'rest_framework_jwt.authentication.JSONWebTokenAuthentication' ,
+    #      'rest_framework.authentication.SessionAuthentication',
+    #     'rest_framework.authentication.BasicAuthentication',
+    # ),
 }
-
 
 AUTHENTICATION_BACKENDS = [
     # Needed to login by username in Django admin, regardless of `allauth`
@@ -196,14 +185,13 @@ AUTHENTICATION_BACKENDS = [
     'allauth.account.auth_backends.AuthenticationBackend',
 ]
 
-
 SITE_ID = 1
 
 ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_EMAIL_VERIFICATION = "none"
 ACCOUNT_AUTHENTICATION_METHOD = "username"
 AUTH_USER_MODEL = "user.User"
-ACCOUNT_FORMS = {'signup' : 'user.forms.CustomSignupForm'}
+ACCOUNT_FORMS = {'signup': 'user.forms.CustomSignupForm'}
 OLD_PASSWORD_FIELD_ENABLED = False
 
 REST_AUTH_SERIALIZERS = {
@@ -214,7 +202,10 @@ REST_AUTH_SERIALIZERS = {
 
 }
 
-MEDIA_ROOT = os.path.join(BASE_DIR,'media')
+STATIC_URL = '/static/'
 
-MEDIA_URL = '/media/'
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/images/')
+
+MEDIA_URL = '/media/images/'

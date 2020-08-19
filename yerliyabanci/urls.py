@@ -17,7 +17,8 @@ from django.conf.urls import url
 from django.contrib import admin
 from django.urls import path, include, re_path
 from django.views.generic import TemplateView
-from vuenote.views import DeleteDemand,UpdateDemand
+from advertise.views import images, advertise
+from vuenote.views import DeleteDemand, UpdateDemand
 from vuenote.views import sendmodel
 from rest_framework_jwt.views import obtain_jwt_token, refresh_jwt_token
 from django.conf import settings
@@ -39,8 +40,10 @@ urlpatterns = [
     path('user/', include('user.urls')),
     path('advertise/', include('advertise.urls')),
 
-]
 
+
+
+]
 if settings.DEBUG:
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

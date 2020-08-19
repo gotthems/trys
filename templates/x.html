@@ -1,0 +1,24 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+
+{% for foo in mod %}
+
+<h1>{{ foo.frontal.get }}</h1>
+
+<img src="{{foo.image.url|default_if_none:'#' }}">
+    <img src="{{foo.user|default_if_none:'#' }}">
+{% endfor %}
+
+
+
+
+</body>
+</html>
