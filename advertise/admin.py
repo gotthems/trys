@@ -20,3 +20,4 @@ admin.site.register(ExteriorFeature)
 admin.site.register(InteriorFeature)
 admin.site.register(Frontal)
 admin.site.register(AdvertiseImage)
+

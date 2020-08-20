@@ -1,11 +1,9 @@
 from django.http import Http404, request
 from django.shortcuts import render
-from rest_framework.generics import ListAPIView, CreateAPIView, get_object_or_404, UpdateAPIView, RetrieveUpdateAPIView, \
-    RetrieveDestroyAPIView
-from rest_framework.serializers import ModelSerializer, StringRelatedField
+from rest_framework.generics import ListAPIView, CreateAPIView, get_object_or_404, UpdateAPIView, \
+    RetrieveUpdateAPIView, RetrieveDestroyAPIView
 from advertise.models.advertise_main_model import *
 from advertise.serializer.AdvirtiseMainSerializer import AdvertiseMainSerializer, GetAdvertiseMainSerializer
-from django.views.generic import ListView, DetailView, UpdateView
 from rest_framework.views import APIView
 from rest_framework.response import Response
 

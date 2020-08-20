@@ -65,6 +65,11 @@
           <v-list>
 
             <v-list-item>
+              <v-list-item-title>
+                <router-link style="text-decoration: none;" to="/createAdvertise">
+                İlan ver
+                </router-link>
+              </v-list-item-title>
 
               <v-list-item-title>
                 <router-link style="text-decoration: none;" to="/userProfileUpdate">

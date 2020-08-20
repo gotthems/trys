@@ -11,9 +11,8 @@
 
 {% for foo in mod %}
 
-<h1>{{ foo.frontal.get }}</h1>
 
-<img src="{{foo.image.url|default_if_none:'#' }}">
+
     <img src="{{foo.user|default_if_none:'#' }}">
 {% endfor %}
 

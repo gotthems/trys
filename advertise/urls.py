@@ -1,6 +1,7 @@
 from django.conf.urls import url
 from django.urls import include, path
-from advertise.views import CreateAdvertiseView, images, AllAdvertiseListView, UserOwnedAdvertiseData, UpdateAdvertiseData,DeleteAdvertiseData
+from advertise.views import CreateAdvertiseView, images, AllAdvertiseListView, UserOwnedAdvertiseData,\
+    UpdateAdvertiseData, DeleteAdvertiseData
 
 urlpatterns = [
     url(r'^image/$', images, name='image'),
@@ -15,3 +16,12 @@ urlpatterns = [
 
 
 ]
+
+
+
+
+
+
+
+
+

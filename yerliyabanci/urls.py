@@ -17,7 +17,7 @@ from django.conf.urls import url
 from django.contrib import admin
 from django.urls import path, include, re_path
 from django.views.generic import TemplateView
-from advertise.views import images, advertise
+from advertise.views import images
 from vuenote.views import DeleteDemand, UpdateDemand
 from vuenote.views import sendmodel
 from rest_framework_jwt.views import obtain_jwt_token, refresh_jwt_token

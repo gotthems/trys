@@ -147,17 +147,7 @@ import jsonfile from "../../jsonFiles/jsonfile";
 
       computed:{
 
-          genderq(){
 
-          for(var i in this.$store.getters.user){
-
-            return this.$store.getters.user[i]
-
-          }
-          return this.$store.getters.user
-
-
-        },
             userdata(){
 
 

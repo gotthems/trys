@@ -1,0 +1,1143 @@
+{
+  "HousingShapeChoices": [
+    {
+      "text": 1,
+      "value": "Birinci El(Sıfır)"
+    },
+    {
+      "text": 2,
+      "value": "İkinci El"
+    }
+  ],
+
+  "AdvertiseStatusChocies": [
+    {
+      "text": 0,
+      "value": "Aktif"
+    },
+    {
+      "text": 1,
+      "value": "Kiralandı"
+    },
+    {
+      "text": 2,
+      "value": "Satıldı"
+    }
+  ],
+
+  "AdvertiseVisibilityChoices": [
+    {
+      "text": 0,
+      "value": "Herkes"
+    },
+    {
+      "text": 1,
+      "value": "Sadece Ben"
+    }
+  ],
+
+  "UsingStatusChoices": [
+    {
+      "text": 0,
+      "value": "Boş"
+    },
+    {
+      "text": 1,
+      "value": "Kiracılı"
+    },
+    {
+      "text": 2,
+      "value": "Mülk Sahibi"
+    }
+  ],
+
+  "NumberOfBathroomsChoices": [
+      {
+      "text": 0,
+      "value": "Yok"
+    },
+    {
+      "text": 1,
+      "value": "1"
+    },
+    {
+      "text": 2,
+      "value": "2"
+    },
+    {
+      "text": 3,
+      "value": "3"
+    },
+    {
+      "text": 4,
+      "value": "4"
+    },
+    {
+      "text": 5,
+      "value": "5"
+    },
+    {
+      "text": 6,
+      "value": "6"
+    },
+    {
+      "text": 7,
+      "value": "7"
+    },
+    {
+      "text": 8,
+      "value": "8"
+    }
+  ],
+
+  "HeatingChoices": [
+      {
+      "text": 0,
+      "value": "Yok"
+    },
+    {
+      "text": 1,
+      "value": "Soba"
+    },
+    {
+      "text": 2,
+      "value": "Doğalgaz Sobası"
+    },
+    {
+      "text": 3,
+      "value": "Kat Kaloriferi"
+    },
+    {
+      "text": 4,
+      "value": "Merkezi Isıtıcı"
+    },
+    {
+      "text": 5,
+      "value": "Doğalgaz"
+    },
+    {
+      "text": 6,
+      "value": "Klima"
+    },
+    {
+      "text": 7,
+      "value": "Şömine"
+    }
+  ],
+
+  "FLOOR_LOCATİON_CHOICES": [
+      {
+      "text": 0,
+      "value": "Bodrum Kat"
+    },
+    {
+      "text": 1,
+      "value": "Zemin Kat"
+    },
+    {
+      "text": 2,
+      "value": "1"
+    },
+    {
+      "text": 3,
+      "value": "2"
+    },
+    {
+      "text": 4,
+      "value": "3"
+    },
+    {
+      "text": 5,
+      "value": "4"
+    },
+    {
+      "text": 6,
+      "value": "5"
+    },
+    {
+      "text": 7,
+      "value": "6"
+    },
+    {
+      "text": 8,
+      "value": "7"
+    },{
+      "text": 9,
+      "value": "8"
+    },{
+      "text": 10,
+      "value": "9"
+    },{
+      "text": 11,
+      "value": "10"
+    },{
+      "text": 12,
+      "value": "11"
+    },{
+      "text": 13,
+      "value": "12"
+    },
+    {
+      "text": 14,
+      "value": "13"
+    },
+    {
+      "text": 15,
+      "value": "14"
+    },
+    {
+      "text": 16,
+      "value": "15"
+    },
+    {
+      "text": 17,
+      "value": "16"
+    },
+    {
+      "text": 18,
+      "value": "17"
+    },
+    {
+      "text": 19,
+      "value": "18"
+    },
+      {
+      "text": 20,
+      "value": "19"
+    },
+    {
+      "text": 21,
+      "value": "20"
+    }
+  ],
+
+  "FLOOR_TOTAL_CHOICES": [
+      {
+      "text": 0,
+      "value": "1"
+    },
+    {
+      "text": 1,
+      "value": "2"
+    },
+    {
+      "text": 2,
+      "value": "3"
+    },
+    {
+      "text": 3,
+      "value": "4"
+    },
+    {
+      "text": 4,
+      "value": "5"
+    },
+    {
+      "text": 5,
+      "value": "6"
+    },
+    {
+      "text": 6,
+      "value": "7"
+    },
+    {
+      "text": 7,
+      "value": "8"
+    },
+    {
+      "text": 8,
+      "value": "9"
+    },{
+      "text": 9,
+      "value": "10"
+    },{
+      "text": 10,
+      "value": "11"
+    },{
+      "text": 11,
+      "value": "12"
+    },{
+      "text": 12,
+      "value": "13"
+    },{
+      "text": 13,
+      "value": "14"
+    },
+    {
+      "text": 14,
+      "value": "15"
+    },
+    {
+      "text": 15,
+      "value": "16"
+    },
+    {
+      "text": 16,
+      "value": "17"
+    },
+    {
+      "text": 17,
+      "value": "18"
+    },
+    {
+      "text": 18,
+      "value": "19"
+    },
+    {
+      "text": 19,
+      "value": "20"
+    },
+      {
+      "text": 20,
+      "value": "19"
+    }
+  ],
+
+  "NumberOfBuildingAgeChoices": [
+      {
+      "text": 0,
+      "value": "1"
+    },
+    {
+      "text": 1,
+      "value": "2"
+    },
+    {
+      "text": 2,
+      "value": "3"
+    },
+    {
+      "text": 3,
+      "value": "4"
+    },
+    {
+      "text": 4,
+      "value": "5-10 Arası"
+    },
+    {
+      "text": 5,
+      "value": "11-15 Arası"
+    },
+    {
+      "text": 6,
+      "value": "16-20 Arası"
+    },
+    {
+      "text": 7,
+      "value": "20-25 Arası"
+    },
+   {
+      "text": 8,
+      "value": "25-30 Arası"
+    },
+   {
+      "text": 9,
+      "value": "30-40 Arası"
+    },
+   {
+      "text": 10,
+      "value": "40-50 Arası"
+    }
+   ],
+
+  "NumberOfRoomsChoices": [
+      {
+      "text": 0,
+      "value": "1+0"
+    },
+    {
+      "text": 1,
+      "value": "1+1"
+    },
+    {
+      "text": 2,
+      "value": "2+0"
+    },
+    {
+      "text": 3,
+      "value": "2+1"
+    },
+    {
+      "text": 4,
+      "value": "2+2"
+    },
+    {
+      "text": 5,
+      "value": "3+1"
+    },
+    {
+      "text": 6,
+      "value": "3+2"
+    },
+    {
+      "text": 7,
+      "value": "4+1"
+    },
+   {
+      "text": 8,
+      "value": "4+2"
+    },
+   {
+      "text": 9,
+      "value": "5+1"
+    },
+   {
+      "text": 10,
+      "value": "5+2"
+   },
+   {
+      "text": 11,
+      "value": "6+1"
+   },
+   {
+      "text": 12,
+      "value": "6+2"
+   },
+   {
+      "text": 13,
+      "value": "7+1"
+   },
+   {
+      "text": 14,
+      "value": "7+2"
+   }
+
+  ],
+
+  "interior_feature": [
+      {
+      "text": 1,
+      "value": "ADSL"
+    },
+    {
+      "text": 2,
+      "value": "ADSL-VDSL"
+    },
+    {
+      "text": 3,
+      "value": "Fiber"
+    },
+    {
+      "text": 4,
+      "value": "Ahşap Doğrama"
+    },
+    {
+      "text": 5,
+      "value": "Akıllı Ev"
+    },
+    {
+      "text": 6,
+      "value": "Alarm(Hırsız)"
+    },
+    {
+      "text": 7,
+      "value": "Alarm(Yangın)"
+    },
+    {
+      "text": 8,
+      "value": "Giysi Odası"
+    },
+   {
+      "text": 9,
+      "value":  "Gömme Dolap"
+    },
+   {
+      "text": 10,
+      "value": "Alaturka Tuvalet"
+    },
+   {
+      "text": 11,
+      "value": "Alüminyum Doğrama"
+   },
+   {
+      "text": 12,
+      "value": "Amerikan Kapı"
+   },
+   {
+      "text": 13,
+      "value": "Ankastre Davlumbaz"
+   },
+   {
+      "text": 14,
+      "value": "Ankastre Buzdolabı"
+   },
+  {
+      "text": 15,
+      "value": "Ankastre Çamaşır Makinesi"
+  },
+  {
+      "text": 16,
+      "value": "Ankastre Fırın"
+  },
+   {
+      "text": 17,
+      "value": "Ankastre Bulaşık Makinesi"
+  },
+   {
+      "text": 18,
+      "value": "Beyaz Eşya"
+  },
+  {
+      "text": 19,
+      "value": "Asansör"
+  },
+   {
+      "text": 20,
+      "value": "Balkon"
+  },
+  {
+      "text": 21,
+      "value": "Barbekü"
+  },
+  {
+      "text": 22,
+      "value": "PVC Zemin Kaplama"
+  },
+  {
+      "text": 23,
+      "value": "Laminant Parke Zemin Kaplama"
+  },
+   {
+      "text": 24,
+      "value": "Üç Boyutlu Zemin Kaplama"
+  },
+  {
+      "text": 25,
+      "value": "Kauçuk Zemin Kaplama"
+  },
+  {
+      "text": 26,
+      "value": "Seramik Zemin Kaplama"
+  },
+  {
+      "text": 27,
+      "value": "Mermer Zemin Kaplama"
+  },
+  {
+      "text": 28,
+      "value": "Lamine Parke"
+  },
+  {
+      "text": 29,
+      "value": "Duşakabin"
+  },
+  {
+      "text": 30,
+      "value": "Ebeveyn Banyosu"
+  },
+  {
+      "text": 31,
+      "value": "Jakuzi"
+  },
+  {
+      "text": 32,
+      "value": "Fırın"
+  },
+  {
+      "text": 33,
+      "value": "Sauna"
+  },
+  {
+      "text": 34,
+      "value": "Giyinme Odası"
+  },
+  {
+      "text": 35,
+      "value": "Görüntülü Diafon"
+  },
+  {
+      "text": 36,
+      "value": "Epoksi Zemin Kaplama"
+  },
+  {
+      "text": 37,
+      "value": "Poliüretan Zemin Kaplama"
+  },
+  {
+      "text": 38,
+      "value":"Şömine"
+  },
+  {
+      "text": 39,
+      "value": "Amerikan Mutfak"
+  },
+  {
+      "text": 40,
+      "value": "Ada Tipi mutfak"
+  },
+  {
+      "text": 41,
+      "value": "Yarım Ada Tipi mutfak"
+  },
+  {
+      "text": 42,
+      "value": "İki taraflı Mutfak"
+  },
+  {
+      "text": 43,
+      "value": "L tipi Mutfak"
+  },
+  {
+      "text": 44,
+      "value": "U tipi mutfak"
+  },
+  {
+      "text": 45,
+      "value": "Taş Duvar"
+  },
+  {
+      "text": 46,
+      "value": "Amerikan Kapı"
+  },
+  {
+      "text": 47,
+      "value": "Çelik Kapı"
+  },
+  {
+      "text": 48,
+      "value": "Ahşap Kapı"
+  }
+  ],
+
+  "exterior_feature": [
+      {
+      "text": 1,
+      "value": "Asansör"
+    },
+    {
+      "text": 2,
+      "value": "Buhar Odası"
+    },
+    {
+      "text": 3,
+      "value": "Güvenlik"
+    },
+    {
+      "text": 4,
+      "value": "Hamam"
+    },
+    {
+      "text": 5,
+      "value": "Hidrofor"
+    },
+    {
+      "text": 6,
+      "value": "Isı Yalıtım"
+    },
+    {
+      "text": 7,
+      "value": "Jeneratör"
+    },
+    {
+      "text": 8,
+      "value": "Kablo TV"
+    },
+   {
+      "text": 9,
+      "value":  "Kamera Sistemi"
+    },
+   {
+      "text": 10,
+      "value": "Kapalı Garaj"
+    },
+   {
+      "text": 11,
+      "value": "Kapıcı"
+   },
+   {
+      "text": 12,
+      "value": "Kreş"
+   },
+   {
+      "text": 13,
+      "value":  "Oyun Parkı"
+   },
+   {
+      "text": 14,
+      "value":"Sauna"
+   },
+  {
+      "text": 15,
+      "value": "Ses Yalıtımı"
+  },
+  {
+      "text": 16,
+      "value":  "Spor Alanı"
+  },
+   {
+      "text": 17,
+      "value": "Su Deposu"
+   },
+   {
+      "text": 18,
+      "value": "Tenis Kortu"
+  },
+  {
+      "text": 19,
+      "value": "Uydu"
+  },
+   {
+      "text": 20,
+      "value": "Yangın Merdiveni"
+   },
+  {
+      "text": 21,
+      "value": "Yüzme Havuzu(Açık)"
+  },
+  {
+      "text": 22,
+      "value":  "Yüzme Havuzu(Kapalı)"
+  },
+  {
+      "text": 23,
+      "value": "Isı Yalıtımı"
+  },
+   {
+      "text": 24,
+      "value": "Ses Yalıtımı"
+  }
+
+  ],
+
+  "locality": [
+      {
+      "text": 1,
+      "value": "Alışveriş Merkezi"
+    },
+    {
+      "text": 2,
+      "value": "Belediye"
+    },
+    {
+      "text": 3,
+      "value": "Cami"
+    },
+    {
+      "text": 4,
+      "value": "Denize Sıfır"
+    },
+    {
+      "text": 5,
+      "value": "Eczane"
+    },
+    {
+      "text": 6,
+      "value": "Eğlence Merkezi"
+    },
+    {
+      "text": 7,
+      "value": "Sinema"
+    },
+    {
+      "text": 8,
+      "value": "Fuar"
+    },
+   {
+      "text": 9,
+      "value":  "Havra"
+    },
+   {
+      "text": 10,
+      "value": "Kilise"
+    },
+   {
+      "text": 11,
+      "value": "Lise"
+   },
+   {
+      "text": 12,
+      "value": "Market"
+   },
+   {
+      "text": 13,
+      "value":  "Park"
+   },
+   {
+      "text": 14,
+      "value":"Polis Merkezi"
+   },
+  {
+      "text": 15,
+      "value": "Sağlık Ocağı"
+  },
+  {
+      "text": 16,
+      "value":  "Semt Pazarı"
+  },
+   {
+      "text": 17,
+      "value": "Spor Salonu"
+   },
+   {
+      "text": 18,
+      "value": "Üniversite"
+  },
+  {
+      "text": 19,
+      "value": "İlkokul-Ortaokul"
+  },
+   {
+      "text": 20,
+      "value": "İtfaiye"
+   },
+  {
+      "text": 21,
+      "value": "Şehir Merkezi"
+  },
+  {
+      "text": 22,
+      "value":  "Koşu Yolu"
+  },
+  {
+      "text": 23,
+      "value": "Orman"
+  },
+   {
+      "text": 24,
+      "value": "Kaymakalmlık"
+  },
+   {
+      "text": 25,
+      "value": "Valilik"
+  },
+  {
+      "text": 26,
+      "value": "Karayolları İşletmesi"
+  },
+   {
+      "text": 27,
+      "value": "Toprak Mahsülleri Ofisi"
+  },
+   {
+      "text": 28,
+      "value": "Sebze-Meyve Hali"
+  },
+   {
+      "text": 29,
+      "value": "Ticaret Merkezi"
+  },
+   {
+      "text": 30,
+      "value": "Anaokulu"
+  },
+   {
+      "text": 31,
+      "value": "Sağlık Ocağı"
+  },
+   {
+      "text": 32,
+      "value": "Hastane"
+  },
+   {
+      "text": 33,
+      "value": "Kafe"
+  },
+   {
+      "text": 34,
+      "value": "Restaurant"
+  },
+   {
+      "text": 35,
+      "value": "Balıkçı"
+  },
+   {
+      "text": 36,
+      "value": "Manav"
+  },
+   {
+      "text": 37,
+      "value": "Eczane"
+  },
+   {
+      "text": 38,
+      "value": "Bakkal"
+  },
+   {
+      "text": 39,
+      "value": "Market"
+  },
+   {
+      "text": 40,
+      "value": "Stadyum"
+  },
+   {
+      "text": 41,
+      "value": "Çay Ocağı"
+  },
+  {
+      "text": 42,
+      "value": "Kıraathane"
+  },
+  {
+      "text": 43,
+      "value": "Eğlence Mekanı"
+  },
+   {
+      "text": 44,
+      "value": "Rehabilitasyon Merkezi"
+  },
+   {
+      "text": 45,
+      "value": "Gündüz Bakım Evi"
+  }
+
+  ],
+
+  "transportation": [
+      {
+      "text": 1,
+      "value": "Anayol"
+    },
+    {
+      "text": 2,
+      "value": "Avrasya Tüneli"
+    },
+    {
+      "text": 3,
+      "value": "Boğaz Köprüleri"
+    },
+    {
+      "text": 4,
+      "value": "Cadde"
+    },
+    {
+      "text": 5,
+      "value": "Deniz Otobüsü"
+    },
+    {
+      "text": 6,
+      "value": "Dolmuş"
+    },
+    {
+      "text": 7,
+      "value": "E-5"
+    },
+
+   {
+      "text": 8,
+      "value":  "Havaalanı"
+    },
+   {
+      "text": 9,
+      "value": "Marmaray"
+    },
+   {
+      "text": 10,
+      "value": "Metro"
+   },
+   {
+      "text": 11,
+      "value": "Metrobüs"
+   },
+   {
+      "text": 12,
+      "value":  "Minibüs"
+   },
+   {
+      "text": 13,
+      "value":"Otobüs Durağı"
+   },
+  {
+      "text": 14,
+      "value": "Ses Yalıtımı"
+  },
+  {
+      "text": 15,
+      "value":  "Spor Alanı"
+  },
+   {
+      "text": 16,
+      "value": "Sahil"
+   },
+   {
+      "text": 17,
+      "value": "TEM"
+  },
+  {
+      "text": 18,
+      "value": "Teleferik"
+  },
+   {
+      "text": 19,
+      "value": "Tramvay"
+   },
+  {
+      "text": 20,
+      "value": "Tren İstasyonu"
+  },
+  {
+      "text": 21,
+      "value":  "İskele"
+  },
+  {
+      "text": 22,
+      "value": "Otogar"
+  },
+   {
+      "text": 23,
+      "value": "Taksi Durağı"
+  },
+   {
+      "text": 24,
+      "value": "Deniz Taksi"
+  },
+  {
+      "text": 26,
+      "value": "Hava Taksi"
+  }
+
+  ],
+
+  "landscape": [
+    {
+      "text": 1,
+      "value": "Boğaz"
+    },
+    {
+      "text": 2,
+      "value": "Deniz"
+    },
+    {
+      "text": 3,
+      "value": "Doğa"
+    },
+    {
+      "text": 4,
+      "value": "Göl"
+    },
+    {
+      "text": 5,
+      "value": "Havuz"
+    },
+    {
+      "text": 6,
+      "value": "Park & Yeşil Alan"
+    },
+    {
+      "text": 7,
+      "value": "Şehir"
+    },
+   {
+      "text": 8,
+      "value": "Orman"
+    },
+   {
+      "text": 9,
+      "value": "Akarsu"
+    }
+
+   ],
+
+  "suitable_for_disabled": [
+    {
+      "text": 1,
+      "value": "Araç Park Yeri"
+    },
+    {
+      "text": 2,
+      "value": "Asansör"
+    },
+    {
+      "text": 3,
+      "value": "Doğa"
+    },
+    {
+      "text": 4,
+      "value": "Göl"
+    },
+    {
+      "text": 5,
+      "value": "Banyo"
+    },
+    {
+      "text": 6,
+      "value": "Geniş Koridor"
+    },
+    {
+      "text": 7,
+      "value": "Giriş / Rampa"
+    },
+   {
+      "text": 8,
+      "value": "Merdiven"
+    },
+   {
+      "text": 9,
+      "value": "Mutfak"
+    },
+    {
+      "text": 10,
+      "value": "Oda Kapısı"
+    },
+    {
+      "text": 11,
+      "value": "Park"
+    },
+    {
+      "text": 12,
+      "value": "Priz / Elektrik Anahtarı"
+    },
+    {
+      "text": 13,
+      "value": "Tutamak / Korkuluk"
+    },
+    {
+      "text": 14,
+      "value": "Tuvalet"
+    },
+    {
+      "text": 15,
+      "value": "Yüzme Havuzu"
+    }
+
+   ],
+
+  "visibility": [
+       {
+      "text": 0,
+      "value": "Herkes"
+    },
+    {
+      "text": 1,
+      "value": "Sadece Ben"
+    }
+  ],
+
+  "status": [
+       {
+      "text": 0,
+      "value": "Aktif"
+    },
+    {
+      "text": 1,
+      "value": "Kiralandı"
+    },
+    {
+      "text": 1,
+      "value": "Satıldı"
+    }
+
+  ],
+
+  "balcony_exist": [
+       {
+      "text": "true",
+      "value": "Var"
+    },
+    {
+      "text": "false",
+      "value": "Yok"
+    },
+    {
+      "text": 1,
+      "value": "Satıldı"
+    }
+
+  ]
+}
+
+
+
+
+
+

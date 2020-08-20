@@ -11,6 +11,9 @@ import loginUser from '../view/user/login'
 import changePassword from '../view/user/passwordChange'
 import userProfile from '../view/user/userProfile'
 import userProfileUpdate from '../view/user/userProfileUpdate'
+import userSelfAdvertise from '../view/advertise/userSelfAdvertise'
+import createAdvertise from '../view/advertise/createAdvertise'
+
 
 
 Vue.use(Router)
@@ -72,6 +75,17 @@ export default new Router({
       name: 'userProfileUpdate',
       component: userProfileUpdate
     },
+       {
+      path: '/userSelfAdvertise',
+      name: 'userSelfAdvertise',
+      component: userSelfAdvertise
+    },
+     {
+      path: '/createAdvertise',
+      name: 'createAdvertise',
+      component: createAdvertise
+    },
+
 
 
   ]

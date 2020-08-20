@@ -31,7 +31,7 @@ class Advertise(models.Model):
     status = models.PositiveIntegerField(choices=AdvertiseStatusChocies.CHOICES, verbose_name="Aktiflik Durumu")
     visibility = models.PositiveIntegerField(choices=AdvertiseVisibilityChoices.CHOICES,
                                              verbose_name="İlan Görünürlüğü")
-    image = models.ImageField(blank=True)
+    image = models.ImageField(blank=True,null=True)
 
     # collections
     frontal = models.ManyToManyField(to="advertise.Frontal")
@@ -40,7 +40,7 @@ class Advertise(models.Model):
     locality = models.ManyToManyField(to="advertise.Locality")
     transportation = models.ManyToManyField(to="advertise.Transportation")
     landscape = models.ManyToManyField(to="advertise.Landscape")
-    sutiable_for_disabled = models.ManyToManyField(to="advertise.SuitableForDisabled")
+    suitable_for_disabled = models.ManyToManyField(to="advertise.SuitableForDisabled")
 
     def __str__(self):
         return f"{self.title}"
@@ -50,7 +50,7 @@ class Advertise(models.Model):
 
 class AdvertiseImage(models.Model):
     advertiseForeign = models.ForeignKey(Advertise, default=None, on_delete=models.CASCADE)
-    images = models.FileField(upload_to='images/', blank=True)
+    images = models.FileField(upload_to='images/', blank=True, null=True)
 
     def __str__(self):
         return self.advertiseForeign.title

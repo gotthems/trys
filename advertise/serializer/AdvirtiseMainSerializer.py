@@ -33,7 +33,7 @@ class GetAdvertiseMainSerializer(ModelSerializer):
     exterior_feature = StringRelatedField(many=True)
     transportation = StringRelatedField(many=True)
     landscape = StringRelatedField(many=True)
-    sutiable_for_disabled = StringRelatedField(many=True)
+    suitable_for_disabled = StringRelatedField(many=True)
     status = ChoicesSerializerField(choices=Advertise.status)
     number_of_rooms = ChoicesSerializerField(choices=Advertise.number_of_rooms)
     building_age = ChoicesSerializerField(choices=Advertise.building_age)
