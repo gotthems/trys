@@ -10,7 +10,7 @@
     }
   ],
 
-  "AdvertiseStatusChocies": [
+  "AdvertiseStatusChoices": [
     {
       "text": 0,
       "value": "Aktif"
@@ -125,7 +125,7 @@
     }
   ],
 
-  "FLOOR_LOCATİON_CHOICES": [
+  "FLOOR_LOCATION_CHOICES": [
       {
       "text": 0,
       "value": "Bodrum Kat"
@@ -1127,11 +1127,8 @@
     {
       "text": "false",
       "value": "Yok"
-    },
-    {
-      "text": 1,
-      "value": "Satıldı"
     }
+
 
   ]
 }
